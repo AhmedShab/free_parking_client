@@ -38,6 +38,11 @@ body {
   margin-top: 50px;
 }
 
+.find-table {
+  background-color: #bb7676;
+  font-size: 2rem;
+}
+
 .flex-register {
   display: flex;
   justify-content: center;

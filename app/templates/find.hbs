@@ -26,11 +26,15 @@
   <h1>Find page</h1>
 
   {{#each model as |data|}}
-  <h3>{{data.emailAddress}}</h3>
-  <h3>{{data.date}}</h3>
-  <h3>{{data.from}}</h3>
-  <h3>{{data.to}}</h3>
-  <h3>{{data.no_days}}</h3>
-  <h3>{{data.homeAddress}}</h3>
+  <table class="table table table-condensed find-table">
+    <tr>
+      <td>{{data.emailAddress}}</td>
+      <td>{{data.date}}</td>
+      <td>{{data.from}}</td>
+      <td>{{data.to}}</td>
+      <td>{{data.no_days}}</td>
+      <td>{{data.homeAddress}}</td>
+    </tr>
+  </table>
   {{/each}}
 </div>
