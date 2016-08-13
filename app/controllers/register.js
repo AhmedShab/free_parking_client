@@ -2,21 +2,26 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  isDisabled: '',
+  api: Ember.inject.service(),
 
-  ajax: Ember.inject.service(),
 
   actions: {
     saveParking() {
-      return this.get('ajax').request('/', {
-        method: 'POST',
-        data: {
-          emailAddress: this.get('emailAddress'),
-          date : this.get('date'),
-          from : this.get('from'),
-          to : this.get('to'),
-          no_days : this.get('no_days'),
-          homeAddress: this.get('homeAddress'),
+      const emailAddress = this.get('emailAddress');
+      const date = this.get('date');
+      const from = this.get('from');
+      const to = this.get('to');
+      const no_days = this.get('no_days');
+      const homeAddress= this.get('homeAddress');
+
+      this.get('api').post('/parkings', {
+        jsonData: {
+          emailAddress: emailAddress,
+          date: date,
+          from: from,
+          to: to,
+          no_days: parseInt(no_days),
+          homeAddress: homeAddress
         }
       });
     }
