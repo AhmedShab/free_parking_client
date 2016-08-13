@@ -1,0 +1,44 @@
+body {
+  background-color: #d0d0d6
+}
+
+.center {
+    margin-top: 16%;
+}
+
+.flex-home {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20%;
+}
+
+.btn-secondary {
+  color: white;
+  background-color: #930828;
+}
+
+.btn-secondary:hover {
+  background-color: #930828;
+}
+
+.map-canvas {
+  width: 600px;
+  height: 400px;
+}
+
+.flex-findPage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.flex-register {
+  display: flex;
+  justify-content: center;
+}

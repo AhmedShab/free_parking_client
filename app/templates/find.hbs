@@ -1,0 +1,36 @@
+{{!-- <h1 class="center">google-map-demo</h1>
+
+<div class="flex-findPage">
+
+  {{place-autocomplete-field
+    value= model.address
+    disable=false
+    handlerController= this
+    inputClass= 'place-autocomplete--input'
+    focusOutCallback='done'
+    placeChangedCallback='placeChanged'
+    types='(cities)'
+    restrictions= restrictionsObjectFromController
+    withGeoLocate= true
+  }}
+</div> --}}
+
+{{!--  "emailAddress": String,
+	"date" : String,
+	"from" : String,
+	"to" : String,
+	"no_days" : Number,
+	"homeAddress": String--}}
+
+<div class="flex-findPage">
+  <h1>Find page</h1>
+
+  {{#each model as |data|}}
+  <h3>{{data.emailAddress}}</h3>
+  <h3>{{data.date}}</h3>
+  <h3>{{data.from}}</h3>
+  <h3>{{data.to}}</h3>
+  <h3>{{data.no_days}}</h3>
+  <h3>{{data.homeAddress}}</h3>
+  {{/each}}
+</div>
