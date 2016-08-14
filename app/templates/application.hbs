@@ -1,16 +1,1 @@
-<nav>
-  {{#link-to 'index'}}
-    Home
-  {{/link-to}}
-  {{#if session.isAuthenticated}}
-    <button type="button" {{action 'logout'}}>Logout</button>
-  {{else}}
-    {{#link-to 'login'}}
-      Login
-    {{/link-to}}
-  {{/if}}
-</nav>
-
-<hr>
-
 {{outlet}}
