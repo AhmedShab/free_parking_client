@@ -1,40 +1,26 @@
-{{!-- <h1 class="center">google-map-demo</h1>
-
-<div class="flex-findPage">
-
-  {{place-autocomplete-field
-    value= model.address
-    disable=false
-    handlerController= this
-    inputClass= 'place-autocomplete--input'
-    focusOutCallback='done'
-    placeChangedCallback='placeChanged'
-    types='(cities)'
-    restrictions= restrictionsObjectFromController
-    withGeoLocate= true
-  }}
-</div> --}}
-
-{{!--  "emailAddress": String,
-	"date" : String,
-	"from" : String,
-	"to" : String,
-	"no_days" : Number,
-	"homeAddress": String--}}
-
-<div class="flex-findPage">
-  <h1>Find page</h1>
-
-  {{#each model as |data|}}
-  <table class="table table table-condensed find-table">
-    <tr>
-      <td>{{data.emailAddress}}</td>
-      <td>{{data.date}}</td>
-      <td>{{data.from}}</td>
-      <td>{{data.to}}</td>
-      <td>{{data.no_days}}</td>
-      <td>{{data.homeAddress}}</td>
-    </tr>
+<div class="find-table">
+  <table class="table table-inverse">
+    <thead>
+      <tr>
+        <th>Email Address</th>
+        <th>Date</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Number of days</th>
+        <th>Home address</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |data|}}
+      <tr>
+        <td>{{data.emailAddress}}</td>
+        <td>{{data.date}}</td>
+        <td>{{data.from}}</td>
+        <td>{{data.to}}</td>
+        <td>{{data.no_days}}</td>
+        <td>{{data.homeAddress}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
   </table>
-  {{/each}}
 </div>

@@ -1,9 +1,11 @@
-body {
-  background-color: #d0d0d6
-}
+// body {
+//   background-color: #d0d0d6;
+//   background-image: url("http://www.pennparking.com/wp-content/uploads/2012/10/campaign-bg-3.jpg");
+// }
+
 
 .center {
-    margin-top: 16%;
+  margin-top: 16%;
 }
 
 .flex-home {
@@ -24,9 +26,8 @@ body {
   background-color: #930828;
 }
 
-.map-canvas {
-  width: 600px;
-  height: 400px;
+.ember-cli-g-map {
+  height: 300px;
 }
 
 .flex-findPage {
@@ -39,8 +40,8 @@ body {
 }
 
 .find-table {
-  background-color: #bb7676;
   font-size: 2rem;
+  margin-top: 50px;
 }
 
 .flex-register {
