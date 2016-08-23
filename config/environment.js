@@ -19,6 +19,14 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['g-map'] = {
+    exclude: true,
+    libraries: ['places', 'geometry'],
+    version: '3.26',
+    language: 'en',
+    protocol: 'https'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

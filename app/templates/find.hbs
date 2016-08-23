@@ -18,7 +18,14 @@
         <td>{{data.from}}</td>
         <td>{{data.to}}</td>
         <td>{{data.no_days}}</td>
-        <td>{{data.homeAddress}}</td>
+
+        {{#g-map lat=data.lat lng=data.lng zoom=15 as |context|}}
+          {{#g-map-marker context lat=data.lat lng=data.lng as |markerContext|}}
+            {{#g-map-infowindow markerContext openOn="mouseover" closeOn="mouseout"}}
+              <h6>{{data.homeAddress}}</h6>
+            {{/g-map-infowindow}}
+          {{/g-map-marker}}
+        {{/g-map}}
       </tr>
       {{/each}}
     </tbody>
