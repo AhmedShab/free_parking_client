@@ -1,36 +1,38 @@
-{{!-- <div class="center">
-<button class="btn btn-primary" {{action 'sendRequest'}}>Test send request</button>
-{{#each model in |test|}}
-<p>test.hey</p>
-{{/each}}
-</div> --}}
+<div class="form">
 
+  <div id="">
 
-<div class="flex-register">
-
-
-  <div class="text-center">
     <h1>Share your parking spot</h1>
 
-    <br/><br/>
+    <div class="top-row">
+      <div class="field-wrap">
+        {{input type="email" value=emailAddress class="req" placeholder="Enter your e-mail address." autofocus="autofocus"}}
+      </div>
 
-    {{input type="email" value=emailAddress class="form-control" placeholder="Enter your e-mail address." autofocus="autofocus"}}
-    {{input type="text" value=date class="form-control" placeholder="Enter the date" autofocus="autofocus"}}
-    {{input type="text" value=from class="form-control" placeholder="Enter from what time" autofocus="autofocus"}}
-    {{input type="text" value=to class="form-control" placeholder="Enter until what time" autofocus="autofocus"}}
-    {{input type="text" value=no_days class="form-control" placeholder="Enter number of days" autofocus="autofocus"}}
-    {{input type="text" value=homeAddress class="form-control" placeholder="Enter your address" autofocus="autofocus"}}
-    <br/><br/>
+      <div class="field-wrap">
+        {{input type="text" value=date class="req" placeholder="Enter the date" autofocus="autofocus"}}
+      </div>
+    </div>
+
+    <div class="field-wrap">
+      {{input type="text" value=from class="req" placeholder="from (e.g: 12 pm)" autofocus="autofocus"}}
+    </div>
+
+    <div class="field-wrap">
+      {{input type="text" value=to class="req" placeholder="to (e.g: 4 pm)" autofocus="autofocus"}}
+    </div>
+
+    <div class="field-wrap">
+      {{input type="text" value=no_days class="req" placeholder="Enter number of days" autofocus="autofocus"}}
+    </div>
+
+    <div class="field-wrap">
+      {{input type="text" value=homeAddress class="req" placeholder="Enter your address" autofocus="autofocus"}}
+    </div>
+
     <button class="btn btn-primary btn-lg btn-block" {{action 'saveParking'}} disabled={{isDisabled}}>Submit</button>
-
-    {{!-- {{#if responseMessage}}
-    <div class="alert alert-success">{{responseMessage}}</div>
-    {{/if}} --}}
-
-
-    <br/><br/>
 
   </div>
 
 
-</div>
+</div> <!-- /form -->
