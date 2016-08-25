@@ -1,1 +1,6 @@
-{{outlet}}
+  <ul class="tab tab-pane">
+    <li class="btn btn-primary">{{#link-to "signup"}}Sign up{{/link-to}}</li>
+    <li class="btn btn-primary">{{#link-to "login"}}Log in{{/link-to}}</li>
+    <button type="submit" class="btn btn-primary" {{action 'logout'}}>Logout</button>
+  </ul>
+  {{outlet}}

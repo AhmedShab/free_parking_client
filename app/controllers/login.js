@@ -11,6 +11,10 @@ export default Ember.Controller.extend({
     });
   },
 
+  clearToken(){
+      this.set('token', '');
+  },
+
   actions: {
     login(){
       this.set('errorMessage', '');
@@ -22,6 +26,7 @@ export default Ember.Controller.extend({
       }).then((response) => {
         if (response.success) {
           this.set('token', response.token);
+          this.transitionToRoute('index');
         }
         else {
           this.set('errorMessage', 'Username or password is incorrect');
